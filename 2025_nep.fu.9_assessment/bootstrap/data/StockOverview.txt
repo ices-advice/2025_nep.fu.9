@@ -1,0 +1,24 @@
+Country	Season	Season type	Year	Stock	Area	Fleets	Effort	UnitEffort	Catch. kg	Catch Cat.	Report cat.	Discards Imported Or Raised
+UK(Scotland)	4	Quarter	2024	nep.fu.9	FU.9	OTB_DEF_>=120_0_0_all	90068	kWd	41640.00	Landings	A-All - reported, nonre	Imported
+UK(Scotland)	2	Quarter	2024	nep.fu.9	FU.9	FPO_CRU_0_0_0_all	120566	kWd	616.00	Landings	A-All - reported, nonre	Imported
+UK(Scotland)	4	Quarter	2024	nep.fu.9	FU.9	OTB_CRU_70-99_0_0_all	76214	kWd	200.00	Discards	A-All - reported, nonre	Imported
+UK(Scotland)	1	Quarter	2024	nep.fu.9	FU.9	OTB_DEF_>=120_0_0_all	151699	kWd	60270.00	Landings	A-All - reported, nonre	Imported
+UK(Scotland)	4	Quarter	2024	nep.fu.9	FU.9	OTB_CRU_70-99_0_0_all	76214	kWd	78440.00	Landings	A-All - reported, nonre	Imported
+UK(Scotland)	3	Quarter	2024	nep.fu.9	FU.9	OTB_CRU_70-99_0_0_all	134991	kWd	8720.00	Discards	A-All - reported, nonre	Imported
+UK(Scotland)	1	Quarter	2024	nep.fu.9	FU.9	FPO_CRU_0_0_0_all	108275	kWd	491.00	Landings	A-All - reported, nonre	Imported
+UK(Scotland)	2	Quarter	2024	nep.fu.9	FU.9	OTB_CRU_70-99_0_0_all	64574	kWd	0.00	Discards	A-All - reported, nonre	Imported
+UK(Scotland)	1	Quarter	2024	nep.fu.9	FU.9	MIS_MIS_0_0_0_HC	173909	kWd	0.00	Landings	A-All - reported, nonre	Imported
+UK(Scotland)	3	Quarter	2024	nep.fu.9	FU.9	OTB_DEF_>=120_0_0_all	105484	kWd	71230.00	Landings	A-All - reported, nonre	Imported
+UK(Scotland)	3	Quarter	2024	nep.fu.9	FU.9	MIS_MIS_0_0_0_HC	310657	kWd	236.00	Landings	A-All - reported, nonre	Imported
+France	2024	Year	2024	nep.fu.9	FU.9	MIS_MIS_0_0_0	-9	kWd	0.00	Landings	R-Reported	Imported
+UK(Scotland)	4	Quarter	2024	nep.fu.9	FU.9	OTB_DEF_>=120_0_0_all	90068	kWd	0.00	Discards	A-All - reported, nonre	Imported
+UK(Scotland)	3	Quarter	2024	nep.fu.9	FU.9	FPO_CRU_0_0_0_all	155155	kWd	870.00	Landings	A-All - reported, nonre	Imported
+UK(Scotland)	2	Quarter	2024	nep.fu.9	FU.9	OTB_CRU_70-99_0_0_all	64574	kWd	115900.00	Landings	A-All - reported, nonre	Imported
+UK(Scotland)	3	Quarter	2024	nep.fu.9	FU.9	OTB_DEF_>=120_0_0_all	105484	kWd	0.00	Discards	A-All - reported, nonre	Imported
+UK(Scotland)	2	Quarter	2024	nep.fu.9	FU.9	OTB_DEF_>=120_0_0_all	111578	kWd	78983.00	Landings	A-All - reported, nonre	Imported
+UK (England)	2	Quarter	2024	nep.fu.9	FU.9	OTB_DEF_>=120_0_0_all	750	kWd	726.60	Landings	R-Reported	Imported
+UK(Scotland)	3	Quarter	2024	nep.fu.9	FU.9	OTB_CRU_70-99_0_0_all	134991	kWd	314850.00	Landings	A-All - reported, nonre	Imported
+UK(Scotland)	1	Quarter	2024	nep.fu.9	FU.9	OTB_CRU_70-99_0_0_all	61725	kWd	75440.00	Landings	A-All - reported, nonre	Imported
+UK(Scotland)	4	Quarter	2024	nep.fu.9	FU.9	FPO_CRU_0_0_0_all	117540	kWd	675.00	Landings	A-All - reported, nonre	Imported
+UK(Scotland)	2	Quarter	2024	nep.fu.9	FU.9	MIS_MIS_0_0_0_HC	192255	kWd	0.00	Landings	A-All - reported, nonre	Imported
+UK(Scotland)	4	Quarter	2024	nep.fu.9	FU.9	MIS_MIS_0_0_0_HC	46523	kWd	1959.00	Landings	A-All - reported, nonre	Imported

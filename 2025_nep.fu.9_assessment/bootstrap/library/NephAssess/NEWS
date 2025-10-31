@@ -1,0 +1,131 @@
+--------------------------------------------------------------------------------
+NephAssess 0.0-0 (2018-04-01)
+--------------------------------------------------------------------------------
+o forecast.table.WGNSSK.r updated to include percentage changed in advice in relation to the previous advice
+
+--------------------------------------------------------------------------------
+NephAssess 0.0-0 (2017-04-01)
+--------------------------------------------------------------------------------
+o nephup.R
+  Changed the nephup objects and the function to deal with BMS data.
+  As no slots for BMS data are officially available (for now) from FLR, two extra slots were created as attributes of the stock object. They can be accessed in the following way: 
+  * stock.object@bms: this contains the officially reported BMS
+  * stock.object@bms.n: The length frequencies of BMS obtained from Intercatch.
+  Another change in nephup.R is the way new data are read. Example:
+  nephup.ff<- nephup(wdir=nephup.dir, stock.object=stock.object, lfile="Frsff.txt", bmsfile="BMSff.txt", filenames="File_listFF.txt")
+  Arguments “lfile” and “bmsfile” are respectively the officially reported landings and BMS. Argument “filenames” is a text file which contains the name, year and catch category of any files to be uploaded.
+  An example of code for using nephup.R is provided here:
+  S:\Nephrops\Assessment\Neph2017\NEPHUP\NephUp Files\new_nephup_example.R
+
+o historical HRs.R
+  Renamed function simply to “exploitation.table” (replacing exploitation.table.2015)
+  Added BMS to the calculation of harvest ratios (combined with landings as all BMS are dead)
+
+o plots_advice.r
+  Deleted all the different related functions (“plots.advice.2014”, (“plots.advice.2016, etc) and kept just one “plots.advice”. Not likely to be useful anyway as all plots for advice are now done as standard plots from ICES script.
+
+o tables.R
+  Changed to include a column with BMS landings (if any are reported”
+
+--------------------------------------------------------------------------------
+NephAssess 0.0-0 (2016-11-01)
+--------------------------------------------------------------------------------
+o tv.workup.angle.R
+  This has been modified so that it outputs total (average over counters) counts for each station as required by WGNEPS.
+
+
+--------------------------------------------------------------------------------
+NephAssess 0.0-0 (2016-04-01)
+--------------------------------------------------------------------------------
+o Nephup.R
+  This new "nephup" function was re-written to replace the previous function created by Neil. The main difference is it now reads the previous year stock object and adds new data (for new years) or replaces data (from previous years) from txt files (same format as before). All it is required is to update the txt files with new (or old), including the year ranges that are supposed to be updated. 
+  An example of code is provided in file:
+  S:\FMP-Group-Inshore\IFG\Nephrops\Assessment\Neph2016\WGNSSK 16\NephUp Files\FF\ new_nephup_example.R
+  Another change in the Nephup.R function is that it is no longer change the heading of Intercatch landings/discards output files (usually names eg NumberPrSexPrQuarterLandingFile.txt). The new function now deals with the current file format.
+
+o sex.ratio.plot.R
+  Calculates and plots the sex ratio (males) in catches by number (“quarter” or “year” option available) for a given stock object.
+  Example:
+  sex.ratio.plot(wdir=Wkdir, stock.obj=nephup.ff, print.output=F, type="quarter")
+
+o nephup.long.term.plots_kw.R
+  This is a variation of “nephup.long.term.plots.R”. The main difference is that it plots effort and LPUE in days and kwdays in a two vertical axis plot, to compare the two effort units. If only one effort unit is available, it still plots days/kwdays in the same way as before.
+  Example:
+  nephort.fl <- list(days=nephort(nephup.dir, eff.file = "eff_FL.days.txt"), kwdays=nephort(nephup.dir, eff.file = "eff_FL.kwdays.txt"))
+  #Effort in days and kwdays
+  nephup.long.term.plots_kw(Wkdir,stock=nephup.fl,effort.data.days=nephort.fl$days, effort.data.kwdays=nephort.fl$kwdays,
+                            international=T,international.landings="international.landings.csv")
+  #Just effort in kwdays
+  nephup.long.term.plots_kw(Wkdir,stock=nephup.fl, effort.data.kwdays=nephort.fl$kwdays,
+                            international=T,international.landings="international.landings.csv")
+
+--------------------------------------------------------------------------------
+NephAssess 0.0-0 (2015-09-01)
+--------------------------------------------------------------------------------
+o tv.workup.fu.R
+  Code added to calculate a CV (result output into file under folder “fishstats”
+
+o select.strata.dh.VMS.R
+  New function to evaluate whether survey points in Devil’s hole are on the VMS strata 
+
+o historical HRs.2015.R
+  Function “exploitation.table.2015” edited to include dead discard weights in the summary table (request from ICES, probably not relevant in the future)
+
+o forecast.table.2014.R
+  Corrected error with discard rate calculation (when the average of the last 3 years < 1% the
+  discard percentage was multiplied by 100. eg Fladen_discard_12-14=0.6% -----> old output was 60%
+
+o forecast.table.2015.R
+  Function edited from forecast.table.2014.R to accommodate changes in the format and method of forecast for 
+  advice given in 2015. Landings and discards are now wanted and unwanted catches respectively (no survival).
+  Total discard rates used in place of dead discard rates.
+
+
+--------------------------------------------------------------------------------
+NephAssess 0.0-0 (2015-04-01)
+--------------------------------------------------------------------------------
+o Correction in forecast script (“forecast.table.2014.r”)to deal with situations where mean discards are lower than 1%.New function “forecast.table.2015.r” to generate a new forecast table with the format agreed by ICES for the Nephrops catch advice for 2016.
+
+--------------------------------------------------------------------------------
+NephAssess 0.0-0 (2014-07-29)
+--------------------------------------------------------------------------------
+o Change in TV workup functions to include Noup
+o Strata.R (noup.strata & check)
+o Tv.workup.fu.R
+o no.plot.R
+
+o tv.wokup.angle.R
+o tv.wokup.angle.R: added an arguments (subset=T, counters.removed=file) for removing counters from workup when they are over/undercounting consistently. The “counters.removed” argument is a txt file in the following format:
+
+Station	Counter_ID
+FL14005	KB
+FL14006	KB
+FL14019	SD
+
+
+--------------------------------------------------------------------------------
+NephAssess 0.0-0 (2014-03-14)
+--------------------------------------------------------------------------------
+o NephAssess package modified to work on R 3.x.x.
+o North minch and Devil’s Hole polygon files (extension “rda” in data folder) were converted to a different format that relies on package “rgeos”. Package “gpclib” (which was not made available by developers for R 3) is not required anymore.
+
+
+--------------------------------------------------------------------------------
+NephAssess 0.0-0 (2013-05-01)
+--------------------------------------------------------------------------------
+o Change of the tv.workup script.
+  The new tv workup script is now called tv.workup.angle.R. The method to calculate average densities is still the same and the main difference is that the camera angle of mounting is used as a direct input. This was decided because all the uncertainties that arise each year due to several different measurements being taken (sometimes using different reference points leading to different results) to calculate something that can be directly measured in a simpler way. The camera angle will be in the future measured with a protractor with lasers. This does not mean we cannot take other measurements to double check the angle we get. But it is simpler to come up with a value that should be fixed during the survey and used as a direct input for the workup code. Therefore, the backheight and camera length are not used anymore. This means that the 3rd line of the index file (containing the camera parameters) needs to be changed. See the new and old formats below:
+
+New format:
+
+0612s -------------------> Cruise number
+North Minch -------------> FU
+90,38,92,54,41 ----------> Frontheight, camera mounting angle, rangefinder height, horizontal angle, vertical angle
+44 -----------------------> Number of stations
+
+Old format:
+
+0612s -------------------> Cruise number
+North Minch -------------> FU
+90,106,92,18.5,54,41 ----------> Frontheight, backheight, rangefinder height, camera length, horizontal angle, vertical angle
+44 -----------------------> Number of stations

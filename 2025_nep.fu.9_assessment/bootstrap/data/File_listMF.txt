@@ -1,0 +1,4 @@
+year	category	file
+1	2024	landings	Moray_LAN_LFD_intercatch_2024.txt
+2	2024	discards	Moray_DIS_LFD_intercatch_2024.txt
+3	2024	bms	NA
